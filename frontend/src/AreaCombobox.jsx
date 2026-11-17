@@ -1,4 +1,5 @@
 import { useEffect, useId, useMemo, useRef, useState } from 'react';
+import './AreaCombobox.css';
 
 export default function AreaCombobox({ value, onChange }) {
   const [areas, setAreas] = useState([]);
@@ -98,7 +99,9 @@ export default function AreaCombobox({ value, onChange }) {
         setActiveIndex(areas.length ? 0 : -1);
         return;
       }
-      setActiveIndex((current) => (filteredAreas.length ? (current + 1) % filteredAreas.length : -1));
+      setActiveIndex((current) =>
+        filteredAreas.length ? (current + 1) % filteredAreas.length : -1,
+      );
     } else if (event.key === 'ArrowUp') {
       event.preventDefault();
       if (!open) {
@@ -107,7 +110,9 @@ export default function AreaCombobox({ value, onChange }) {
         setActiveIndex(areas.length ? areas.length - 1 : -1);
         return;
       }
-      setActiveIndex((current) => (filteredAreas.length ? (current - 1 + filteredAreas.length) % filteredAreas.length : -1));
+      setActiveIndex((current) =>
+        filteredAreas.length ? (current - 1 + filteredAreas.length) % filteredAreas.length : -1,
+      );
     } else if (event.key === 'Enter') {
       if (!open) return;
       if (activeIndex >= 0 && filteredAreas[activeIndex]) {
@@ -140,7 +145,9 @@ export default function AreaCombobox({ value, onChange }) {
           aria-autocomplete="list"
           aria-expanded={open}
           aria-controls={listId}
-          aria-activedescendant={open && activeIndex >= 0 ? `${listId}-option-${activeIndex}` : undefined}
+          aria-activedescendant={
+            open && activeIndex >= 0 ? `${listId}-option-${activeIndex}` : undefined
+          }
           autoComplete="off"
           placeholder={placeholder}
           value={query}
@@ -180,7 +187,6 @@ export default function AreaCombobox({ value, onChange }) {
                 onClick={() => selectArea(area)}
               >
                 <span>{area}</span>
-
               </li>
             );
           })}
@@ -196,7 +202,9 @@ export default function AreaCombobox({ value, onChange }) {
             </li>
           )}
           {filteredAreas.length === 0 && !showCustomOption && (
-            <li className="area-combobox-empty" role="presentation">No matching area found</li>
+            <li className="area-combobox-empty" role="presentation">
+              No matching area found
+            </li>
           )}
         </ul>
       )}

@@ -1,0 +1,209 @@
+.mini-card {
+  position: relative;
+  min-width: 0;
+  padding: 9px 9px 14px;
+  overflow: hidden;
+  border: 1px solid rgba(24, 79, 47, 0.07);
+  border-radius: 21px;
+  background: #fff;
+  box-shadow: var(--shadow-card);
+  transition:
+    transform 0.22s ease,
+    box-shadow 0.22s ease;
+}
+.mini-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 18px 34px rgba(36, 78, 49, 0.16);
+}
+.card-image {
+  display: block;
+  height: clamp(140px, 13vw, 208px);
+  margin-bottom: 12px;
+  border-radius: 15px;
+  background-position: center;
+  background-size: cover;
+  transition:
+    background-size 0.3s ease,
+    transform 0.3s ease;
+}
+.card-image img {
+  width: 100%;
+  height: 100%;
+  border-radius: inherit;
+  object-fit: cover;
+}
+.mini-card:hover .card-image {
+  transform: scale(1.015);
+}
+.dogs {
+  background-image: url('/images/dogs.webp');
+}
+.cats {
+  background-image: url('/images/cats.webp');
+}
+.puppies {
+  background-image: url('/images/puppies.webp');
+}
+.kittens {
+  background-image: url('/images/kittens.webp');
+}
+.caret {
+  background-image: url('/images/pet-care.webp');
+}
+.community {
+  background-image: url('/images/community.webp');
+}
+.card-content {
+  padding: 0 7px;
+}
+.card-content h3 {
+  margin: 0 0 5px;
+  color: var(--green-900);
+  font-family: 'Baloo 2', sans-serif;
+  font-size: clamp(1.2rem, 1.5vw, 1.65rem);
+  line-height: 1.1;
+}
+.card-content p {
+  min-height: 42px;
+  margin: 0;
+  color: #596159;
+  font-size: 0.8rem;
+  line-height: 1.5;
+}
+.circle-action {
+  position: absolute;
+  right: 13px;
+  bottom: 13px;
+  display: grid;
+  width: 32px;
+  height: 32px;
+  place-items: center;
+  border-radius: 50%;
+  color: #fff;
+  background: linear-gradient(135deg, #ffad5c, #f07832);
+  box-shadow: 0 6px 15px rgba(240, 138, 63, 0.32);
+}
+.mini-card-large {
+  padding: 12px 12px 17px;
+}
+.mini-card-large .card-image {
+  height: clamp(220px, 25vw, 360px);
+}
+.mini-card-large .card-content h3 {
+  font-size: 1.7rem;
+}
+.mini-card-large .card-content p {
+  min-height: auto;
+  padding-bottom: 8px;
+  font-size: 0.92rem;
+}
+@media (max-width: 1200px) {
+  .card-image {
+    height: 220px;
+  }
+}
+@media (max-width: 640px) {
+  .mini-card {
+    padding: 7px 7px 12px;
+    border-radius: 16px;
+  }
+  .card-image {
+    height: 155px;
+    margin-bottom: 9px;
+    border-radius: 12px;
+  }
+  .card-content {
+    padding: 0 4px;
+  }
+  .card-content h3 {
+    font-size: 1.25rem;
+  }
+  .card-content p {
+    min-height: 45px;
+    padding-right: 15px;
+    font-size: 0.73rem;
+  }
+  .circle-action {
+    right: 9px;
+    bottom: 10px;
+    width: 28px;
+    height: 28px;
+  }
+  .mini-card-large .card-image {
+    height: 190px;
+  }
+  .mini-card-large .card-content h3 {
+    font-size: 1.3rem;
+  }
+  .mini-card-large .card-content p {
+    font-size: 0.77rem;
+  }
+}
+@media (max-width: 380px) {
+  .card-image {
+    height: 130px;
+  }
+  .mini-card-large .card-image {
+    height: 230px;
+  }
+}
+
+.card-image {
+  position: relative;
+  overflow: hidden;
+}
+.card-image::after {
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+  display: grid;
+  width: 42px;
+  height: 42px;
+  place-items: center;
+  border: 1px solid rgba(255, 255, 255, 0.85);
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.9);
+  box-shadow: 0 5px 15px rgba(24, 79, 47, 0.18);
+  content: '🐶';
+  font-size: 1.3rem;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+.cats.card-image::after,
+.kittens.card-image::after {
+  content: '🐱';
+}
+.puppies.card-image::after {
+  content: '🐕';
+}
+.caret.card-image::after {
+  content: '🐰';
+}
+.community.card-image::after {
+  content: '🐦';
+}
+.mini-card:hover .card-image::after,
+.card-image:focus-visible::after {
+  transform: translateY(-4px) rotate(8deg) scale(1.08);
+  box-shadow: 0 8px 18px rgba(24, 79, 47, 0.22);
+}
+.circle-action {
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+.mini-card:hover .circle-action {
+  transform: rotate(-35deg) scale(1.08);
+  box-shadow: 0 8px 18px rgba(240, 138, 63, 0.38);
+}
+
+@media (max-width: 640px) {
+  .card-image::after {
+    right: 7px;
+    bottom: 7px;
+    width: 34px;
+    height: 34px;
+    font-size: 1.05rem;
+  }
+}

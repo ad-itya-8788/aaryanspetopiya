@@ -1,0 +1,34 @@
+.site {
+  min-height: 100vh;
+  overflow: clip;
+}
+
+.main-content {
+  width: 100%;
+}
+
+.inner-page {
+  min-height: 65vh;
+  padding-bottom: 70px;
+  background: linear-gradient(180deg, #f7faf4, #fff 390px);
+}
+.inner-page {
+  animation: page-enter 0.55s ease both;
+}
+.reveal-on-scroll {
+  opacity: 0;
+  transform: translateY(20px);
+  transition:
+    opacity 0.65s ease var(--reveal-delay, 0ms),
+    transform 0.65s cubic-bezier(0.2, 0.7, 0.2, 1) var(--reveal-delay, 0ms);
+}
+.reveal-on-scroll.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+@media (prefers-reduced-motion: reduce) {
+  .reveal-on-scroll {
+    opacity: 1;
+    transform: none;
+  }
+}

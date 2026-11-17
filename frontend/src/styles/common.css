@@ -1,0 +1,499 @@
+body,
+button,
+input,
+select,
+textarea {
+  font-family: 'Manrope', sans-serif;
+}
+button,
+a {
+  -webkit-tap-highlight-color: transparent;
+}
+.mobile-register-link {
+  display: none;
+}
+.collage-bg-wrapper {
+  position: relative;
+  width: min(720px, 100%);
+  height: min(450px, 58vh);
+  min-height: 340px;
+  border-radius: 28px 28px 10px 10px;
+  background: url('/images/pet-collage.webp') center 40% / cover no-repeat;
+  box-shadow: 0 22px 48px rgba(24, 79, 47, 0.2);
+}
+.image-load-probe {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  opacity: 0;
+  pointer-events: none;
+}
+.pet-card--label {
+  position: absolute;
+  top: 25px;
+  right: 22px;
+  display: grid;
+  width: 150px;
+  height: 144px;
+  place-items: center;
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  border-radius: 17px;
+  background: rgba(255, 255, 255, 0.74);
+  backdrop-filter: blur(7px);
+}
+.signboard {
+  display: flex;
+  width: 128px;
+  flex-direction: column;
+  padding: 13px 10px;
+  border: 2px solid #d59a45;
+  border-radius: 14px;
+  background: #f8edcc;
+  color: var(--green-900);
+  font-family: 'Baloo 2', sans-serif;
+  font-size: 1.07rem;
+  font-weight: 700;
+  line-height: 1;
+  text-align: center;
+  transform: rotate(2deg);
+}
+.sparkle-one {
+  top: 25px;
+  left: 9%;
+}
+.sparkle-two {
+  top: -22px;
+  left: 48%;
+  font-size: 2.2rem;
+}
+
+.explore-shell {
+  padding: 30px clamp(24px, 5vw, 100px) 48px;
+  background: #fff;
+}
+.section-title {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  color: var(--green-900);
+  font-family: 'Baloo 2', sans-serif;
+}
+.section-title.centered {
+  justify-content: center;
+  margin: 0 0 24px;
+}
+.section-title h2 {
+  margin: 0;
+  font-size: clamp(2.2rem, 3.2vw, 3.3rem);
+  line-height: 1;
+}
+.title-icon {
+  font-size: 2.35rem;
+}
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  gap: 18px;
+}
+.section-title.left {
+  justify-content: flex-start;
+  margin-bottom: 12px;
+}
+.icon-wrap {
+  display: inline-grid;
+  width: 48px;
+  height: 48px;
+  flex: 0 0 auto;
+  place-items: center;
+  border-radius: 16px;
+  font-size: 1.55rem;
+}
+.icon-wrap.pink {
+  background: linear-gradient(135deg, #ffdbda, #ffc2c4);
+}
+.icon-wrap.orange {
+  background: linear-gradient(135deg, #ffe3be, #ffd09e);
+}
+.icon-wrap.green {
+  background: linear-gradient(135deg, #dff6d0, #baf3b3);
+}
+.icon-wrap.yellow {
+  background: linear-gradient(135deg, #fff5c7, #f9e2a7);
+}
+.icon-wrap.purple {
+  background: linear-gradient(135deg, #f1d3ff, #dfbbff);
+}
+.icon-wrap.blue {
+  background: linear-gradient(135deg, #d0f0ff, #b0dfff);
+}
+.icon-wrap.large {
+  width: 60px;
+  height: 60px;
+  font-size: 1.9rem;
+}
+.explore-grid {
+  width: min(1400px, calc(100% - 60px));
+  margin: 0 auto;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 22px;
+}
+.category-varieties-section {
+  width: min(1200px, calc(100% - 48px));
+  margin: 0 auto 32px;
+}
+.variety-card-title {
+  display: block;
+  margin: 0 0 5px;
+  color: var(--green-900);
+  font-family: 'Baloo 2', sans-serif;
+  font-size: 1.18rem;
+  font-weight: 800;
+  line-height: 1.1;
+}
+.variety-card-description {
+  display: -webkit-box;
+  min-height: 3.6em;
+  padding-bottom: 8px;
+  overflow: hidden;
+  color: #596159;
+  font-size: 0.76rem;
+  line-height: 1.5;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+}
+.variety-card-action {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  align-self: flex-start;
+  margin: 0 4px 2px;
+  padding: 6px 9px;
+  border-radius: 999px;
+  color: #27623a;
+  background: #eef7eb;
+  font-size: 0.69rem;
+  font-weight: 850;
+}
+.variety-card-action span {
+  color: #f07832;
+  font-size: 1rem;
+}
+.category-back-link {
+  display: flex;
+  width: fit-content;
+  margin: 0 auto;
+}
+.success-message {
+  margin: 16px 0 0;
+  color: var(--green-800);
+  font-weight: 800;
+}
+.muted,
+.privacy-note {
+  color: #70796e !important;
+  font-size: 0.85rem;
+  line-height: 1.6;
+}
+.benefit-icon {
+  display: grid;
+  width: 42px;
+  height: 42px;
+  flex: 0 0 auto;
+  place-items: center;
+  border: 1px solid rgba(63, 157, 44, 0.12);
+  border-radius: 13px;
+  color: #3f9d2c;
+  background: linear-gradient(145deg, #effbef, #dff3da);
+  font-size: 1.2rem;
+}
+.span-two {
+  grid-column: span 2;
+}
+.textarea-shell {
+  align-items: flex-start;
+  padding-top: 9px;
+}
+.privacy-note > span:first-child {
+  flex: 0 0 auto;
+  color: #46aa39;
+  font-size: 1.35rem;
+  line-height: 1;
+}
+.confirmation-icon {
+  display: grid;
+  width: 62px;
+  height: 62px;
+  place-items: center;
+  border-radius: 50%;
+  color: #fff;
+  background: var(--green-500);
+  font-size: 2rem;
+  font-weight: 800;
+}
+.text-button {
+  margin-top: 14px;
+  border: 0;
+  color: var(--green-800);
+  background: transparent;
+  font-weight: 800;
+}
+
+@media (min-width: 1600px) {
+  .card-grid {
+    gap: 22px;
+  }
+}
+@media (max-width: 1200px) {
+  .card-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+@media (max-width: 900px) {
+  .collage-bg-wrapper {
+    min-height: 320px;
+    height: 45vw;
+  }
+}
+@media (max-width: 640px) {
+  .collage-bg-wrapper {
+    width: 100%;
+    height: 285px;
+    min-height: 250px;
+    border-radius: 21px 21px 0 0;
+  }
+  .pet-card--label {
+    top: 14px;
+    right: 12px;
+    width: 112px;
+    height: 108px;
+  }
+  .signboard {
+    width: 96px;
+    padding: 9px 6px;
+    font-size: 0.84rem;
+  }
+  .explore-shell {
+    padding: 27px 16px 36px;
+  }
+  .section-title h2 {
+    font-size: 2.1rem;
+  }
+  .title-icon {
+    font-size: 1.7rem;
+  }
+  .card-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+  }
+  .icon-wrap {
+    width: 40px;
+    height: 40px;
+    border-radius: 13px;
+    font-size: 1.2rem;
+  }
+  .icon-wrap.large {
+    width: 48px;
+    height: 48px;
+    font-size: 1.55rem;
+  }
+  .variety-card-title {
+    font-size: 1.05rem;
+  }
+  .variety-card-description {
+    min-height: 3.6em;
+    padding-right: 0;
+    font-size: 0.7rem;
+  }
+  .variety-card-action {
+    margin-right: 2px;
+    margin-left: 2px;
+  }
+  .span-two {
+    grid-column: auto;
+  }
+  .heading-paw {
+    font-size: 1.8rem;
+  }
+}
+@media (max-width: 380px) {
+  .variety-card-title {
+    font-size: 1.02rem;
+    overflow-wrap: anywhere;
+  }
+  .variety-card-description {
+    min-height: 54px;
+    padding-right: 0;
+    font-size: 0.68rem;
+  }
+  .variety-card-action {
+    gap: 5px;
+    padding: 6px 8px;
+    font-size: 0.66rem;
+  }
+}
+.leaf-one {
+  top: 27%;
+  left: 7%;
+  animation: leaf-drift 7s ease-in-out infinite;
+}
+.leaf-two {
+  right: 42%;
+  bottom: 16%;
+  font-size: 1.1rem;
+  animation: leaf-drift 8s ease-in-out -2s infinite reverse;
+}
+.success-message {
+  animation: soft-rise 0.3s ease both;
+}
+.paw-two {
+  animation-delay: -3s;
+}
+.confirmation-icon {
+  animation: success-pop 0.55s cubic-bezier(0.2, 0.8, 0.2, 1.2) both;
+}
+.admin-alert {
+  margin: 0 0 18px;
+  padding: 12px 15px;
+  border-radius: 10px;
+  font-size: 0.9rem;
+}
+.admin-alert.error {
+  background: #fff0ed;
+  color: #a83220;
+}
+.admin-alert.success {
+  background: #e9f6ec;
+  color: #2f7042;
+}
+.admin-login-card .admin-alert {
+  margin-top: 18px;
+}
+
+@media (max-width: 640px) {
+  .leaf-two {
+    right: 12%;
+    bottom: 7%;
+  }
+}
+@media (max-width: 767px) {
+  .span-two {
+    grid-column: auto;
+  }
+  .privacy-note {
+    font-size: 0.72rem;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+.registrations-view {
+  padding: 24px 28px 28px;
+}
+@media (max-width: 700px) {
+  .registrations-view {
+    padding: 16px 14px 22px;
+  }
+}
+@media (max-width: 480px) {
+  .registrations-view {
+    padding: 10px;
+  }
+}
+.pet-knowledge-modal {
+  position: relative;
+  width: min(100%, 440px);
+  padding: 30px clamp(20px, 5vw, 36px);
+  border: 1px solid #e3ecdf;
+  border-radius: 24px;
+  background: #fff;
+  box-shadow: 0 24px 70px rgba(13, 36, 18, 0.24);
+  text-align: center;
+}
+.pet-knowledge-icon {
+  display: grid;
+  width: 62px;
+  height: 62px;
+  place-items: center;
+  margin: 0 auto 12px;
+  border-radius: 20px;
+  background: #edf7e8;
+  font-size: 2rem;
+}
+.pet-knowledge-modal h2 {
+  font-size: 1.85rem;
+}
+.pet-knowledge-modal > p {
+  color: #657365;
+  font-size: 0.9rem;
+  line-height: 1.55;
+}
+.pet-knowledge-actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 18px;
+}
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  clip-path: inset(50%);
+}
+@media (max-width: 380px) {
+  .pet-knowledge-actions {
+    align-items: stretch;
+    flex-direction: column;
+  }
+}
+.pet-knowledge-modal {
+  animation: pet-modal-entrance 0.3s ease-out both;
+}
+
+@keyframes page-enter {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes soft-rise {
+  from {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes paw-drift {
+  0%,
+  100% {
+    translate: 0 0;
+  }
+  50% {
+    translate: 0 -9px;
+  }
+}
+@keyframes leaf-drift {
+  0%,
+  100% {
+    transform: translate3d(0, 0, 0) rotate(-8deg);
+  }
+  50% {
+    transform: translate3d(9px, -13px, 0) rotate(12deg);
+  }
+}

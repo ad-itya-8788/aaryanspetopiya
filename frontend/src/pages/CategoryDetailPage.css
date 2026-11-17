@@ -1,0 +1,295 @@
+.category-variety-count {
+  display: block;
+  margin-top: 6px;
+  color: var(--green-700);
+  font-size: 0.73rem;
+  font-weight: 800;
+}
+.category-detail-copy {
+  width: min(1000px, calc(100% - 48px));
+  margin: 0 auto 32px;
+  color: #51594f;
+  font-size: 1rem;
+  line-height: 1.75;
+  white-space: pre-line;
+}
+.category-variety-toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+  margin: 0 0 18px;
+}
+.category-variety-search {
+  display: flex;
+  width: min(460px, 100%);
+  min-height: 46px;
+  align-items: center;
+  gap: 10px;
+  padding: 0 15px;
+  border: 1px solid #dfe8db;
+  border-radius: 13px;
+  color: #367447;
+  background: #fff;
+  box-shadow: 0 5px 16px rgba(24, 79, 47, 0.06);
+}
+.category-variety-search > span {
+  font-size: 1.3rem;
+}
+.category-variety-search input {
+  width: 100%;
+  border: 0;
+  outline: 0;
+  color: #334439;
+  background: transparent;
+  font: inherit;
+  font-size: 0.88rem;
+}
+.category-variety-results {
+  color: #69756a;
+  font-size: 0.8rem;
+  font-weight: 750;
+}
+.category-variety-grid.explore-grid {
+  display: grid;
+  width: 100%;
+  margin: 0;
+  grid-template-columns: repeat(auto-fill, 160px);
+  justify-content: center;
+  align-items: start;
+  gap: 14px;
+}
+.category-variety-grid .category-variety-card.mini-card {
+  display: flex;
+  width: 100%;
+  max-width: 160px;
+  min-width: 0;
+  justify-self: center;
+  flex-direction: column;
+  align-items: stretch;
+  padding: 9px;
+  color: inherit;
+  font: inherit;
+  text-align: left;
+  cursor: pointer;
+}
+.category-variety-card .card-image {
+  display: block;
+  height: auto;
+  aspect-ratio: 1 / 1;
+  padding: 7px;
+  background-color: #f5f8f2;
+  background-image: none;
+}
+.category-variety-card .card-image img {
+  object-fit: contain;
+}
+.category-variety-card .card-content {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+}
+.category-variety-card:focus-visible {
+  outline: 3px solid #ee8751;
+  outline-offset: 3px;
+}
+.variety-detail-backdrop {
+  position: fixed;
+  z-index: 90;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  padding: 24px;
+  background: rgba(13, 31, 20, 0.68);
+}
+.variety-detail-modal {
+  width: min(900px, 100%);
+  max-height: 90vh;
+  overflow-y: auto;
+  border: 1px solid rgba(255, 255, 255, 0.55);
+  border-radius: 22px;
+  background: #fff;
+  box-shadow: 0 28px 90px rgba(0, 0, 0, 0.32);
+}
+.variety-detail-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 20px;
+  border-bottom: 1px solid #e8eee6;
+  color: #397c49;
+  font-size: 0.78rem;
+  font-weight: 850;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+.variety-detail-header button {
+  display: grid;
+  width: 36px;
+  height: 36px;
+  place-items: center;
+  border: 0;
+  border-radius: 50%;
+  color: #465448;
+  background: #f0f5ed;
+  font-size: 1.6rem;
+  cursor: pointer;
+}
+.variety-detail-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 0.95fr) minmax(0, 1.05fr);
+  gap: 24px;
+  padding: 22px;
+}
+.variety-detail-main-image {
+  width: 100%;
+  height: clamp(260px, 55vh, 520px);
+  min-height: 0;
+  max-height: 65vh;
+  border-radius: 16px;
+  object-fit: contain;
+  object-position: center;
+  background: #f5f8f2;
+}
+.variety-detail-copy h2 {
+  margin: 0 0 8px;
+  color: var(--green-900);
+  font-family: 'Baloo 2', sans-serif;
+  font-size: clamp(1.8rem, 4vw, 2.7rem);
+  line-height: 1.05;
+}
+.variety-detail-copy p {
+  margin: 0 0 14px;
+  color: #596159;
+  font-size: 0.95rem;
+  line-height: 1.7;
+  white-space: pre-line;
+}
+.variety-detail-copy .variety-detail-intro {
+  color: #355a3e;
+  font-size: 1.04rem;
+  font-weight: 750;
+}
+.variety-detail-features {
+  margin: 0 0 16px;
+}
+.variety-detail-features h3 {
+  margin: 0 0 8px;
+  color: #294d32;
+  font-size: 0.86rem;
+}
+.variety-detail-features ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.variety-detail-features li {
+  padding: 6px 10px;
+  border-radius: 999px;
+  color: #316a3e;
+  background: #edf6e9;
+  font-size: 0.73rem;
+  font-weight: 750;
+}
+.variety-detail-gallery {
+  margin-top: 20px;
+}
+.variety-detail-gallery h3 {
+  margin: 0 0 10px;
+  color: #294d32;
+  font-size: 0.9rem;
+}
+.variety-detail-gallery > div {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(76px, 1fr));
+  gap: 8px;
+}
+.variety-detail-gallery img {
+  width: 100%;
+  height: 72px;
+  border-radius: 9px;
+  object-fit: cover;
+  background: #edf4e9;
+}
+.category-page-status {
+  width: min(900px, calc(100% - 48px));
+  margin: 0 auto;
+  padding: 25px;
+  border-radius: 16px;
+  color: #586458;
+  background: #f1f7ed;
+  text-align: center;
+}
+@media (max-width: 640px) {
+  .category-detail-copy,
+  .category-varieties-section {
+    width: calc(100% - 32px);
+  }
+  .category-variety-toolbar {
+    align-items: stretch;
+    flex-direction: column;
+    gap: 8px;
+  }
+  .category-variety-search {
+    width: 100%;
+  }
+  .category-variety-results {
+    align-self: flex-end;
+  }
+  .category-variety-grid.explore-grid {
+    grid-template-columns: repeat(auto-fill, 160px);
+    gap: 12px;
+  }
+  .category-variety-grid .category-variety-card.mini-card {
+    max-width: 160px;
+    padding: 7px 7px 12px;
+    border-radius: 16px;
+  }
+  .category-variety-grid .category-variety-card .card-image {
+    height: auto;
+    aspect-ratio: 1 / 1;
+    margin-bottom: 9px;
+    border-radius: 12px;
+  }
+  .category-variety-card .card-content {
+    padding: 0 4px;
+  }
+  .variety-detail-backdrop {
+    padding: 12px;
+  }
+  .variety-detail-modal {
+    max-height: 94vh;
+    border-radius: 17px;
+  }
+  .variety-detail-layout {
+    grid-template-columns: 1fr;
+    gap: 15px;
+    padding: 14px;
+  }
+  .variety-detail-main-image {
+    height: 52vh;
+    min-height: 180px;
+    max-height: 52vh;
+  }
+}
+@media (max-width: 380px) {
+  .category-variety-grid.explore-grid {
+    grid-template-columns: repeat(auto-fill, 145px);
+    gap: 10px;
+  }
+  .category-variety-grid .category-variety-card.mini-card {
+    max-width: 145px;
+    padding: 7px;
+  }
+  .category-variety-grid .category-variety-card .card-image {
+    height: auto;
+    aspect-ratio: 1 / 1;
+    padding: 6px;
+  }
+  .category-variety-card .card-content {
+    padding: 0 2px;
+  }
+}

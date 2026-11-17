@@ -14,7 +14,8 @@ async function fetchWithTimeout(url, options) {
   try {
     return await fetch(url, { ...options, signal: controller.signal });
   } catch (error) {
-    if (error.name === 'AbortError') throw new ApiError('The server took too long to respond. Please retry.', 0);
+    if (error.name === 'AbortError')
+      throw new ApiError('The server took too long to respond. Please retry.', 0);
     throw error;
   } finally {
     window.clearTimeout(timeout);
@@ -28,7 +29,11 @@ export async function request(path, { method = 'GET', body } = {}) {
       headers: { Accept: 'application/json' },
     });
     const csrfData = await csrfResponse.json();
-    if (!csrfResponse.ok) throw new ApiError(csrfData.message || 'Could not start a secure session.', csrfResponse.status);
+    if (!csrfResponse.ok)
+      throw new ApiError(
+        csrfData.message || 'Could not start a secure session.',
+        csrfResponse.status,
+      );
     csrfToken = csrfData.csrf_token;
   }
 
@@ -45,7 +50,10 @@ export async function request(path, { method = 'GET', body } = {}) {
   const data = await response.json().catch(() => ({}));
   if (!response.ok) {
     const validationMessage = data.errors && Object.values(data.errors).flat()[0];
-    throw new ApiError(validationMessage || data.message || `Request failed (${response.status}).`, response.status);
+    throw new ApiError(
+      validationMessage || data.message || `Request failed (${response.status}).`,
+      response.status,
+    );
   }
   if (data.csrf_token) csrfToken = data.csrf_token;
   return data;

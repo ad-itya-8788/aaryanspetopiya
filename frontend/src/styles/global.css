@@ -1,0 +1,47 @@
+:root {
+  font-family: 'Manrope', sans-serif;
+  color: #2f342e;
+  background: #f7faf4;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  --green-900: #184f2f;
+  --green-800: #1c5d3a;
+  --green-700: #2d7449;
+  --green-500: #3e9655;
+  --orange-500: #f07832;
+  --text-900: #2f342e;
+  --text-700: #565c54;
+  --white: #fff;
+  --shadow-soft: 0 18px 48px rgba(24, 79, 47, 0.11);
+  --shadow-card: 0 12px 28px rgba(49, 69, 43, 0.12);
+}
+
+* {
+  box-sizing: border-box;
+}
+html {
+  min-width: 320px;
+  scroll-behavior: smooth;
+}
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  background: #f7faf4;
+}
+button {
+  cursor: pointer;
+}
+a {
+  color: inherit;
+  text-decoration: none;
+}
+img {
+  display: block;
+  max-width: 100%;
+}
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
